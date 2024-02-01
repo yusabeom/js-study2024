@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+    == 연산자는 암묵적으로 문자열 내부에 숫자가 있다면 
+        자동으로 숫자로 변환한 후에 비교합니다.
+    === 을 사용하면 타입까지 일치하는 지 비교합니다.
+*/
+        var a = 5,
+            b = '5';
+        console.log(a == b);
+        console.log(a === b);
+
+        console.log('-----------------------------------');
+        
+        // 동등 비교는 결과 예측이 힘들기 때문에 조심하셔야 합니다.(사용 권장X)
+        console.log('0' == ''); // r
+        console.log(0 == ''); // t
+        console.log(0 == '0'); // t
+        console.log(false == 'false'); // f
+        console.log(false == '0'); // t
+        
+        //일치비교(===)에서는 NaN을 주의.
+        //NaN은 자신과 일치하지 않는 유일한 값입니다.
+        console.log(NaN === NaN);
+        
+        console.log('-----------------------------------');
+        //문자열 비교 (대/소문자 철저하게 구분함.)
+        console.log('apple' === 'apple');
+        console.log('apple' === 'APPLE');
+        console.log('apple' === 'Apple');
+
+        //문자열끼리의 대소 비교 (사전등재순서)
+        console.log('peach' < 'zebra');
+        console.log('peach' < 'Zebra');
+        //유니코드 문자 번호를 기준으로 합니다.
+        //유니코드: 전 세계의 문자를 번호로 지정한 규격
+        // 같은 문자일 경우 사전 등재 순서로 판단, 알파벳 대문자 < 소문자
+
+    </script>
+
+
+</body>
+
+</html>
