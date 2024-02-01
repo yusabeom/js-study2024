@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    /*
+    점수를 입력받아서,
+    점수가 90점 이상인 사람은 다시 한 번 조건을 검사해서
+    95점 이상은 a+ , 95점 미만이라면 a0
+    80점대는 b
+    70점대는 c
+    60점대는 d,
+    나머지는 모두 f 처리
+    출력 함수는 alert 함수를 이용해서 출력
+    */
+
+    var score = +prompt('점수를 입력하세요.');
+
+    if (score >= 90) {
+        var score = +prompt('점수를 재입력 해주세요');
+        if(score >= 95) {
+            alert('축하합니다 당신의 학점은 A+입니다.');
+        } else {
+            alert('당신의 학점은 A0 입니다.');
+        }
+    } else if(score >= 80) {
+        alert('당신의 학점은 B 입니다.');
+    } else if(score >= 70) {
+        alert('당신의 학점은 C 입니다.');
+    } else if(score >= 60) {
+        alert('당신의 학점은 D 입니다.');
+    } else {
+        alert('당신의 학점은 F 입니다.');
+    }
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
