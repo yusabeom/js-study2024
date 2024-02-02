@@ -23,17 +23,59 @@
         - while문을 if else 로 나눠서 두번 쓰는 것은 지양하겠습니다.
        */
 
-        var x = +prompt('첫번째 정수를 입력하세요');
-        var y = +prompt('두번째 정수를 입력하세요');
+        var x = +prompt("정수 x를 입력하세요:");
+        var y = +prompt("정수 y를 입력하세요:");
+        
+        if (x > y) {
+            var temp = y;
+            y = x;
+            x = temp;
+        }
         var total = 0;
-
+        var n = x;
+        
         while (x <= y) {
             total += x;
             x++;
         }
-        alert(`누적 값은 ${total} 입니다.`)
-       
-        
+        console.log(`${n}부터 ${y} 까지의 누적합계: ${total}`);
+
+
+
+        // var x = +prompt('첫번째 정수를 입력하세요');
+        // var y = +prompt('두번째 정수를 입력하세요');
+        // var sum = 0;
+
+        // while (x <= y) {
+        //     if (x > y) {
+        //         sum += x; // x가 y보다 클 때에도 누적 합계 계산
+        //         // 추가적인 조건 처리 로직이 필요하다면 이곳에 추가
+        //     } else {
+        //         sum += x;
+        //     }
+
+        //     x++;
+        // }
+        // alert(`${sum}`)
+
+        // let x = +prompt("정수 x를 입력하세요:");
+        // let y = +prompt("정수 y를 입력하세요:");
+        // let sum = 0;
+
+        // while (x !== y) {
+        //     if (x > y) {
+        //         sum += x;
+        //         x--;
+        //     } else {
+        //         sum += x;
+        //         x++;
+        //     }
+        // }
+
+        // // y와 x가 같아졌을 때의 값도 더해줍니다.
+        //  sum += x;
+
+        // alert(`누적 합계:" ${sum}`);
     </script>
 
 
