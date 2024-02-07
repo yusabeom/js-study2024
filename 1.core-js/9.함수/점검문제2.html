@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+/*
+  Q. n개의 정수를 전달하면 해당 정수들의 총합과 평균을 
+     반환하는 함수 calcNumbersTotalAndAverage를 작성하세요.
+*/
+    function calcNumbersTotalAndAverage(...numbers) {
+        var total = 0;
+        for(var n of numbers){
+            total += n;
+        }
+        var avg = total / numbers.length;
+        return{
+            total,    //키값과 밸류가 이름이 같다면 키값의 이름 생략 가능
+            avg : avg //변수명이 키가 됨.
+        };
+    }
+        var result = calcNumbersTotalAndAverage(90, 80, 100, 90)
+        console.log(`총합: ${result.total}, 평균: ${result.avg}`);
+
+        //     var total = 0;
+        //     var average = 0;
+        //     for(var sum of numbers){
+        //         total += sum;
+        //     }
+        //     return sum;
+        // }
+        // console.log();
+    </script>
+
+</body>
+</html>

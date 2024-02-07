@@ -17,15 +17,34 @@
          나누어 떨어졌을 시 약수의 개수 카운트를 1증가시키고 출력.
          약수들은 배열에 담아서 한번에 출력해 주세요.
         */
-       var n = +prompt('정수를 입력하세요')
-       var calcDivisor = 0;
-       for(var i=1; i<=n; i++){
-           if(n % i === 0){
-            console.log(i);
-               calcDivisor++;
+
+        function calcDivisor(targetNumber){
+            var divisors = [];
+            for(var i=1; i<= targetNumber; i++) {
+                if(targetNumber % i === 0){
+                    divisors.push(i);
+                }
             }
+            console.log(`${targetNumber}의 약수: ${divisors}`);
+            return divisors.length;// count변수로 직접 세도 되지만, 약수 배열이 있으니 요소의 개수가 약수의 개수일 것이다.
         }
-        console.log(calcDivisor);
+
+
+        var divCount = calcDivisor(10);
+        console.log(`약수의 개수: ${divCount}`);
+
+
+
+
+        //    var n = +prompt('정수를 입력하세요')
+    //    var calcDivisor = 0;
+    //    for(var i=1; i<=n; i++){
+    //        if(n % i === 0){
+    //         console.log(i);
+    //            calcDivisor++;
+    //         }
+    //     }
+    //     console.log(calcDivisor);
         
         
 
