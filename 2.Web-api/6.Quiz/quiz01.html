@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+     <!--
+        이벤트와 요소 취득 및 문법을 활용하여
+        카운트를 누적해서 올리거나 내려주세요.
+        0아래로는 내려가지 않게 하세요.
+    -->
+
+    <h2>자바스크립트 카운트</h2>
+    <input type="text" id="result" value="0" readonly>
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+
+    <script>
+        let total = 0;
+        const $count = document.getElementById('result')
+        const $plus = document.getElementById('plus');
+        const $minus = document.getElementById('minus');
+
+        $plus.addEventListener('click', e => {
+            $count.value++;
+        });
+        
+        $minus.addEventListener('click', e => {
+            
+            if($count.value == 0) {
+                alert('내리지마');
+                return;
+            }
+
+            $count.value--;
+        })
+        
+        
+        
+        
+        
+        
+        // $minus.addEventListener('click', e => {
+        //     $count.value--;
+        //     if($count.value === '-1'){
+        //         alert('내리지마');
+        //         $count.value = '0';
+        //     }
+        // });
+
+        $count.addEventListener('keydown', e => {
+            if(e.keyCode === 38){
+                $plus.click();
+            } else if(e.keyCode === 40) {
+                $minus.click();
+            } else if(e.keyCode === 27) {
+                $count.value = '0';
+            }
+        });
+ 
+
+    </script>
+
+
+</body>
+</html>
