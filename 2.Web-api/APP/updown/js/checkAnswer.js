@@ -56,7 +56,8 @@ function caseDown($icon){
 function correctAnswer($icon) {
  const $finish = document.getElementById('finish');
  $finish.classList.add('show');
- $numbers.onclick = null;
+ document.getElementById('numbers').onclick = null;
+ $icon.setAttribute('id', 'move')
   
  
 }
